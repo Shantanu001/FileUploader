@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <div>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input placeholder="Enter name" type="text" name = "upload" />
+            <input type="file" name="upload"/>
+            <input type="submit">
+            </form>
+        </div>
+        <div>
+          
+            <% files.forEach(el=> { %>
+                <img style="width:400px;height:500px" src="/files/<%= el.filename %>" alt="">
+            <% }) %>
+        </div>
+        </body>
+</html>
